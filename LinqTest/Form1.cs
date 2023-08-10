@@ -75,5 +75,11 @@ namespace LinqTest
                                             orderby item.Name descending
                                             select item;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            movieBindingSource.DataSource = from item in movies
+                                            select item;
+        }
     }
 }
