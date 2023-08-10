@@ -35,10 +35,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.movieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.releaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,7 @@
             this.dataGridView1.DataSource = this.movieBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(343, 426);
             this.dataGridView1.TabIndex = 0;
@@ -108,27 +109,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // movieBindingSource
-            // 
-            this.movieBindingSource.DataSource = typeof(LinqTest.Movie);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // releaseDateDataGridViewTextBoxColumn
             // 
             this.releaseDateDataGridViewTextBoxColumn.DataPropertyName = "ReleaseDate";
             this.releaseDateDataGridViewTextBoxColumn.HeaderText = "ReleaseDate";
             this.releaseDateDataGridViewTextBoxColumn.Name = "releaseDateDataGridViewTextBoxColumn";
+            this.releaseDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // countryDataGridViewTextBoxColumn
             // 
             this.countryDataGridViewTextBoxColumn.DataPropertyName = "Country";
             this.countryDataGridViewTextBoxColumn.HeaderText = "Country";
             this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
+            this.countryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // movieBindingSource
+            // 
+            this.movieBindingSource.DataSource = typeof(LinqTest.Movie);
             // 
             // Form1
             // 
