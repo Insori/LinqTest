@@ -40,5 +40,40 @@ namespace LinqTest
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            movieBindingSource.DataSource = movies;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            movieBindingSource.DataSource = from item in movies
+                                            orderby item.Name ascending
+                                            select item;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            movieBindingSource.DataSource = from item in movies
+                                            orderby item.ReleaseDate descending
+                                            select item;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            movieBindingSource.DataSource = from item in movies
+                                            where item.ReleaseDate > 2015
+                                            orderby item.Name descending
+                                            select item;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            movieBindingSource.DataSource = from item in movies
+                                            where item.Country == "한국"
+                                            orderby item.Name descending
+                                            select item;
+        }
     }
 }
